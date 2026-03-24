@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFRQP707XB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JFRQP707XB');
-  </script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luxfly Indoor Skydiving — Special Offers & Promotions</title>
@@ -192,6 +183,11 @@ footer a:hover{color:var(--pink)}
 .social-links{display:flex;gap:16px}
 .social-links a{font-size:0.8rem;opacity:0.7;transition:opacity 0.2s}
 .social-links a:hover{opacity:1;color:var(--pink)}
+/* HERO TRUST BAR */
+.hero-trust-bar{font-size:0.88rem;font-weight:600;color:rgba(255,255,255,0.95);background:rgba(0,0,0,0.28);display:inline-block;padding:7px 20px;border-radius:50px;margin-bottom:22px;letter-spacing:0.3px;border:1px solid rgba(255,255,255,0.25);}
+/* STICKY BOOK NOW — mobile only */
+@media(max-width:768px){.sticky-book{position:fixed;bottom:0;left:0;right:0;z-index:200;padding:10px 20px 22px;background:linear-gradient(to top,#fff 55%,rgba(255,255,255,0));pointer-events:none;}.sticky-book a{display:block;text-align:center;padding:14px 24px;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;background:var(--pink);color:#fff!important;box-shadow:0 4px 24px rgba(232,44,163,0.45);pointer-events:all;}}
+@media(min-width:769px){.sticky-book{display:none;}}
 </style>
 </head>
 <body>
@@ -226,6 +222,7 @@ footer a:hover{color:var(--pink)}
     <div class="hero-badge" data-i18n="hero_badge">EXCLUSIVE OFFERS</div>
     <h1 data-i18n-html="hero_title">Fly for Less. <span>Thrill for More.</span></h1>
     <p data-i18n="hero_sub">Discover our special packages, seasonal promotions, and exclusive deals at Luxfly Indoor Skydiving. The adventure of a lifetime, now at unbeatable prices.</p>
+    <div class="hero-trust-bar" data-i18n="trust_bar">From €64.90  ·  Exclusive offers  ·  Luxembourg</div>
     <div class="hero-btns">
       <a href="#offers" class="btn btn-pink" data-i18n="hero_cta1">See Current Offers</a>
       <a href="https://indoorskydive.lu/en/gift-voucher" class="btn btn-outline" data-i18n="hero_cta2">Gift Vouchers</a>
@@ -621,7 +618,7 @@ const i18n = {
     loyalty_tag:'PROGRAMME FIDÉLITÉ',loyalty_title:'Volez Plus, Gagnez Plus',loyalty_sub:'Inscrivez-vous gratuitement et cumulez des points à chaque visite. Suivez votre solde sur l\'app FidelityBox.',tier1_name:'Premiers Voleurs',tier1_earn:'1€ dépensé = 1 point (achats sur place)',tier2_name:'SportFlyers',tier2_earn:'Points gagnés par session de vol',rewards:'Récompenses',t1_r1:'1 vol gratuit',t1_r2:'5% de réduction',t1_r3:'10% de réduction',t2_r1:'1 min de vol créditée',t2_r2:'5 min de vol créditées',t2_r3:'15 min de vol créditées',
     review_tag:'AVIS',review_title:'Ce Que Disent Nos Clients',rev1:'"Excellente expérience ! Personnel très sympathique et accueillant. La sensation de voler est absolument incroyable. Merci à mon instructeur Stefan pour sa patience et ses encouragements !"',rev2:'"J\'étais terrifiée au début, mais l\'instructeur était si gentil et doux que j\'ai fini par passer le meilleur moment. Toute l\'expérience est très bien organisée du début à la fin."',rev3:'"Nous avons visité plusieurs centres de skydiving indoor en Europe et celui-ci est le meilleur, de loin. Le personnel est incroyablement professionnel et l\'installation est de classe mondiale."',
     final_title:'Prêt(e) à Vivre le Frisson ?',final_sub:'Des forfaits pour tous les budgets — enfants, familles, duos & groupes. Les créneaux weekend partent vite — réservez maintenant.',
-    footer_addr:'Rue De Grass 103, 6700 Sterpenich<br>Luxembourg / Belgique',footer_hours_t:'Heures d\'Ouverture',footer_hours:'Mer–Ven : 12h00–20h00 | Sam–Dim : 10h00–18h00 | Fermé Lun & Mar (sauf 1er lundi) | 24/7 pour événements réservés',footer_links_t:'Liens Rapides',fl_activity:'L\'Activité',fl_prices:'Tarifs',fl_gift:'Bons Cadeaux',fl_faq:'FAQ',fl_contact:'Contact'
+    footer_addr:'Rue De Grass 103, 6700 Sterpenich<br>Luxembourg / Belgique',trust_bar:'À partir de €64.90 · Offres exclusives · Luxembourg',footer_hours_t:'Heures d\'Ouverture',footer_hours:'Mer–Ven : 12h00–20h00 | Sam–Dim : 10h00–18h00 | Fermé Lun & Mar (sauf 1er lundi) | 24/7 pour événements réservés',footer_links_t:'Liens Rapides',fl_activity:'L\'Activité',fl_prices:'Tarifs',fl_gift:'Bons Cadeaux',fl_faq:'FAQ',fl_contact:'Contact'
   },
   de: {
     urgency:'🔥 Pakete für jedes Budget — ab nur <strong>45,20€</strong> pro Person!<a href="#offers">Alle Angebote →</a>',
@@ -640,7 +637,7 @@ const i18n = {
     loyalty_tag:'TREUEPROGRAMM',loyalty_title:'Mehr Fliegen, Mehr Verdienen',loyalty_sub:'Melde dich kostenlos an und sammle Punkte bei jedem Besuch. Verfolge deinen Kontostand in der FidelityBox-App.',tier1_name:'Erstflieger',tier1_earn:'1€ ausgegeben = 1 Punkt (Vor-Ort-Käufe)',tier2_name:'SportFlyers',tier2_earn:'Punkte pro Flugsession',rewards:'Belohnungen',t1_r1:'1 Gratis-Wiederholungsflug',t1_r2:'5% Rabatt auf nächsten Einkauf',t1_r3:'10% Rabatt auf nächsten Einkauf',t2_r1:'1 Min. Flugzeit-Guthaben',t2_r2:'5 Min. Flugzeit-Guthaben',t2_r3:'15 Min. Flugzeit-Guthaben',
     review_tag:'BEWERTUNGEN',review_title:'Was Unsere Flieger Sagen',rev1:'"Ausgezeichnete Erfahrung! Sehr freundliches und einladendes Personal. Das Fluggefühl ist absolut unglaublich. Danke an meinen Instruktor Stefan für seine Geduld und Ermutigung!"',rev2:'"Ich war anfangs verängstigt, aber der Instruktor war so freundlich und sanft, dass ich am Ende die beste Zeit hatte. Das gesamte Erlebnis ist von Anfang bis Ende sehr gut organisiert."',rev3:'"Wir waren schon in einigen Indoor-Skydiving-Centern in Europa und dieses ist bei weitem das beste. Das Personal ist unglaublich professionell und die Anlage ist Weltklasse."',
     final_title:'Bereit für den Nervenkitzel?',final_sub:'Pakete für jedes Budget — Kinder, Familien, Duos & Gruppen. Wochenendtermine sind schnell weg — jetzt buchen.',
-    footer_addr:'Rue De Grass 103, 6700 Sterpenich<br>Luxemburg / Belgien',footer_hours_t:'Öffnungszeiten',footer_hours:'Mi–Fr: 12:00–20:00 | Sa–So: 10:00–18:00 | Geschlossen Mo & Di (außer 1. Montag) | 24/7 für reservierte Events',footer_links_t:'Schnelllinks',fl_activity:'Die Aktivität',fl_prices:'Preise',fl_gift:'Geschenkgutscheine',fl_faq:'FAQ',fl_contact:'Kontakt'
+    footer_addr:'Rue De Grass 103, 6700 Sterpenich<br>Luxemburg / Belgien',trust_bar:'Ab €64.90 · Exklusive Angebote · Luxemburg',footer_hours_t:'Öffnungszeiten',footer_hours:'Mi–Fr: 12:00–20:00 | Sa–So: 10:00–18:00 | Geschlossen Mo & Di (außer 1. Montag) | 24/7 für reservierte Events',footer_links_t:'Schnelllinks',fl_activity:'Die Aktivität',fl_prices:'Preise',fl_gift:'Geschenkgutscheine',fl_faq:'FAQ',fl_contact:'Kontakt'
   }
 };
 
@@ -720,6 +717,23 @@ document.querySelectorAll('.promo-btn,.btn-pink,.btn-white').forEach(btn => {
     if (typeof fbq === 'function') fbq('track','Lead',{content_name:this.textContent.trim()});
   });
 });
+
+// Clarity Smart Event: Book Now click tracking
+document.addEventListener('click', function(e) {
+  const target = e.target.closest('a[href*="shop.indoorskydive.lu"], a.promo-btn, a.btn-pink, a.nav-cta');
+  if (target) {
+    const lang = new URLSearchParams(window.location.search).get('lang') || 'en';
+    if (typeof clarity === 'function') {
+      clarity('event', 'book_now_click');
+      clarity('set', 'book_now_lang', lang);
+    }
+  }
+});
+</script>
+<!-- STICKY MOBILE BOOK NOW -->
+<div class="sticky-book" id="stickyBook"><a href="#offers" data-i18n="hero_cta1">See Current Offers</a></div>
+<script>
+(function(){var s=document.getElementById('stickyBook');if(!s)return;var h=document.querySelector('.hero');function upd(){if(!h)return;var b=h.getBoundingClientRect().bottom;s.style.display=b>80?'none':'';}window.addEventListener('scroll',upd,{passive:true});upd();})();
 </script>
 </body>
 </html>
